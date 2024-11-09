@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Store Wanna</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #111, #333);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .welcome-text {
+            color: #fff;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 30px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6;
+            }
+        }
+
+        .enter-button {
+            padding: 15px 40px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            background: linear-gradient(45deg, #FF0000, #FF7300, #FFFB00, #48FF00, #00FFD5, #002BFF, #FF00C8, #FF0000);
+            background-size: 400% 400%;
+            color: white;
+            animation: gradient 15s ease infinite;
+            transition: transform 0.3s ease;
+        }
+
+        .enter-button:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="welcome-text">Selamat Datang di Store Wanna</h1>
+    <button class="enter-button" onclick="enterStore()">MASUK STORE</button>
+    
+    
+
+    <script>
+        function enterStore() {
+    window.location.href = 'store.html';  // Redirect to your store page
+}
+
+    </script>
+</body>
+</html>
